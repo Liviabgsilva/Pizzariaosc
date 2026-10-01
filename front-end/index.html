@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bella Pizza - Pizzaria Artesanal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>     
+        <img src="img/logo.png" alt="Bella Pizza" class="rodapé">
+        <button class="btn-login" id="btnOpenLogin">👤 Entrar / Cadastrar</button>
+    </header>
+
+    <div class="container">
+        <h2>Nosso Cardápio</h2>
+        <div class="cardapio-grid" id="cardapioContainer">
+            <!-- As pizzas e bebidas serão geradas aqui pelo script.js -->
+        </div>
+
+        <h2>Seu Pedido</h2>
+        <div class="carrinho-box">
+            <!-- Lista onde o JavaScript vai injetar cada pizza/bebida adicionada -->
+            <ul id="carrinhoItens" class="carrinho-lista">
+                <li class="carrinho-vazio">Seu carrinho está vazio.</li>
+            </ul>
+
+            <div class="total-box">
+                <span>Total:</span>
+                <span id="carrinhoTotal">R$ 0,00</span>
+            </div>
+            <button class="btn-fechar-pedido" id="btnFecharPedido" disabled>Enviar Pedido para a Cozinha</button>
+        </div>
+    </div>
+
+    <!-- Modal de Cadastro / Login -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal" id="btnCloseModal">&times;</span>
+            <h3 id="modalTitle">Identifique-se para Pedir</h3>
+            <form id="clienteForm">
+                <div class="form-group">
+                    <label>Nome Completo</label>
+                    <input type="text" id="inputNome" required placeholder="Ex: João Silva">
+                </div>
+                <div class="form-group">
+                    <label>Telefone / WhatsApp</label>
+                    <input type="text" id="inputTelefone" required placeholder="Ex: (11) 99999-1111">
+                </div>
+                <div class="form-group">
+                    <label>Endereço de Entrega</label>
+                    <input type="text" id="inputEndereco" required placeholder="Rua, Número, Apto">
+                </div>
+                <div class="form-group">
+                    <label>Bairro</label>
+                    <input type="text" id="inputBairro" required placeholder="Ex: Centro">
+                </div>
+                <button type="submit" class="btn-submit">Confirmar Dados</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

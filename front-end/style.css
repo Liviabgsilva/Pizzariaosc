@@ -1,0 +1,251 @@
+
+:root {
+    --creme: #F5F2EB;
+    --terracota: #B85A38;
+    --laranja: #CC5A01;
+    --preto: #df5d07;
+}
+
+header {
+  position: relative;       
+  display: flex;
+  
+  align-items: center;      
+  height: 100px;            /
+  padding: 0 20px;
+}
+
+
+.rodapé {
+  width: 200px;             
+  height: 100px;           
+  object-fit: cover;         
+  border-radius: 50%;       
+  
+  position: absolute;        
+  left: 50%;                
+  top: 50%;                  
+  transform: translate(-50%, -50%); 
+}
+
+
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+body { 
+    background-color: var(--creme); 
+    color: var(--preto); 
+}
+
+header { 
+    background-color: var(--preto); 
+    color: white; 
+    padding: 20px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+
+header h1 { 
+    font-size: 24px; 
+    color: var(--laranja); 
+}
+
+.btn-login { 
+    background-color: var(--terracota); 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-weight: bold; 
+}
+
+.container { 
+    max-width: 1200px; 
+    margin: 40px auto; 
+    padding: 0 20px; 
+}
+
+h2 { 
+    margin-bottom: 20px; 
+    color: var(--terracota); 
+    border-bottom: 2px solid var(--terracota); 
+    padding-bottom: 5px; 
+}
+
+/* Grade do Cardápio */
+.cardapio-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 20px; 
+    margin-bottom: 40px; 
+}
+
+.produto-card { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    border-bottom: 4px solid var(--creme); 
+}
+
+.produto-card:hover { 
+    border-color: var(--laranja); 
+}
+
+.produto-nome { 
+    font-size: 18px; 
+    font-weight: bold; 
+    margin-bottom: 8px; 
+}
+
+.produto-desc { 
+    font-size: 14px; 
+    color: #666; 
+    margin-bottom: 15px; 
+    min-height: 40px; 
+}
+
+.produto-preco { 
+    font-size: 20px; 
+    font-weight: bold; 
+    color: var(--laranja); 
+    margin-bottom: 15px; 
+}
+
+.btn-add { 
+    background-color: var(--preto); 
+    color: white; 
+    border: none; 
+    padding: 8px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    width: 100%; 
+    transition: 0.2s; 
+}
+
+.btn-add:hover { 
+    background-color: var(--laranja); 
+}
+
+/* Janela Modal (Login / Cadastro) */
+.modal { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: rgba(0,0,0,0.6); 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 10; 
+}
+
+.modal-content { 
+    background: white; 
+    padding: 30px; 
+    border-radius: 8px; 
+    width: 100%; 
+    max-width: 400px; 
+    position: relative; 
+}
+
+.close-modal { 
+    position: absolute; 
+    top: 10px; 
+    right: 15px; 
+    font-size: 24px; 
+    cursor: pointer; 
+    color: #aaa; 
+}
+
+.modal h3 { 
+    margin-bottom: 20px; 
+    color: var(--preto); 
+}
+
+.form-group { 
+    margin-bottom: 15px; 
+}
+
+.form-group label { 
+    display: block; 
+    margin-bottom: 5px; 
+    font-size: 14px; 
+    font-weight: bold; 
+}
+
+.form-group input { 
+    width: 100%; 
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+}
+
+.btn-submit { 
+    background-color: var(--laranja); 
+    color: white; 
+    border: none; 
+    padding: 12px; 
+    width: 100%; 
+    border-radius: 4px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-top: 10px; 
+}
+
+/* Painel do Carrinho / Resumo do Pedido */
+.carrinho-box { 
+    background: white; 
+    padding: 25px; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
+}
+
+.carrinho-vazio {
+    color: #888;
+}
+
+.carrinho-item { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 10px 0; 
+    border-bottom: 1px solid #eee; 
+}
+
+.total-box { 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 20px; 
+    font-weight: bold; 
+    margin: 20px 0; 
+    color: var(--preto); 
+}
+
+.btn-fechar-pedido { 
+    background-color: #27ae60; 
+    color: white; 
+    border: none; 
+    padding: 15px; 
+    width: 100%; 
+    border-radius: 5px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    cursor: pointer; 
+}
+
+.btn-fechar-pedido:disabled { 
+    background-color: #ccc; 
+    cursor: not-allowed; 
+}
